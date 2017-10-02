@@ -1,0 +1,4 @@
+#!/bin/bash
+sf='sudo firewall-cmd'
+$sf --zone=public --add-port=2377/tcp --permanent 
+$sf --reload
