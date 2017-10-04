@@ -1,4 +1,16 @@
 #!/bin/bash
 sf='sudo firewall-cmd'
-$sf --zone=public --add-port=2377/tcp --permanent 
+$sf --zone=public --add-port=2375/tcp --permanent 
+$sf --zone=public --add-port=4789/tcp --permanent
+$sf --zone=public --add-port=7946/tcp --permanent
+$sf --zone=public --add-port=7946/udp --permanent
+$sf --zone=public --add-port=12376/tcp --permanent
+$sf --zone=public --add-port=12379/tcp --permanent
+$sf --zone=public --add-port=12380/tcp --permanent
+$sf --zone=public --add-port=12381/tcp --permanent
+$sf --zone=public --add-port=12382/tcp --permanent
+$sf --zone=public --add-port=12383/tcp --permanent
+$sf --zone=public --add-port=12384/tcp --permanent
+$sf --zone=public --add-port=12385/tcp --permanent
+$sf --zone=public --add-port=12386/tcp --permanent
 $sf --reload

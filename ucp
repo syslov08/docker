@@ -1,0 +1,11 @@
+#!/bin/bash
+read -p "node-ip-address: " ip
+# Pull the latest version of UCP
+docker pull docker/ucp:latest
+
+# Install UCP
+docker run --rm -it --name ucp \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  docker/ucp install \
+  --host-address $ip \
+  --interactive
